@@ -1,0 +1,10 @@
+{
+    "siteName": "My Lightweight Blog",
+    "description": "A simple, fast, and SEO-optimized blog.",
+    "footerText": "© 2024 My Lightweight Blog. All rights reserved.",
+    "themeColor": "#6366f1",
+    "social": {
+        "twitter": "#",
+        "github": "#"
+    }
+}

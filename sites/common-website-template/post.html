@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="description" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Placeholder Open Graph -->
+    <meta property="og:title" content="Loading...">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="article">
+    <!-- 💰 MONETIZATION -->
+    <meta name="monetag" content="YOUR_MONETAG_ZONE_ID">
+
+    <!-- 💰 Monetag Official Script -->
+    <script>(function (d, z, s) { s.src = 'https://' + d + '/400/' + z; try { (document.body || document.documentElement).appendChild(s) } catch (e) { } })('vemtoutcheeg.com', YOUR_MONETAG_ZONE_ID, document.createElement('script'));</script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="container">
+                <a href="index.html" class="brand-logo" style="text-decoration: none;">
+                    <span id="brand-name"></span>
+                </a>
+                <nav class="nav-links">
+                    <div class="search-container">
+                        <svg class="search-icon" width="18" height="18" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input type="text" class="search-input" placeholder="Search blog posts..." id="search-input"
+                            autocomplete="off">
+                        <div id="search-results"></div>
+                    </div>
+
+                    <button class="header-share" aria-label="Share">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <a href="payment.html" class="btn-donate">
+                        <span>Donate</span>
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode" class="theme-toggle">
+                        <div class="toggle-icon">☀</div>
+                    </button>
+
+                    <div class="lang-selector-container">
+                        <button class="lang-btn" id="lang-toggle" aria-label="Select Language">
+                            <span class="lang-icon">🌐</span>
+                            <span id="current-lang">English</span>
+                            <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5z" />
+                            </svg>
+                        </button>
+                        <div class="lang-dropdown" id="lang-dropdown">
+                            <input type="text" class="lang-search" placeholder="Search 100+ languages..."
+                                id="lang-search">
+                            <span class="lang-section-title">Popular Languages</span>
+                            <ul class="lang-list" id="lang-list">
+                                <!-- Items injected by JS -->
+                            </ul>
+                            <div class="powered-by">
+                                <span>Powered by Google Translate</span>
+                            </div>
+                        </div>
+                        <div id="google_translate_element"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main id="app">
+            <!-- Single post content will be rendered here -->
+            <div class="skeleton" style="height: 60px; margin-bottom: 1rem;"></div>
+            <div class="skeleton" style="height: 20px; width: 50%; margin-bottom: 2rem;"></div>
+            <div class="skeleton" style="height: 400px; margin-bottom: 2rem;"></div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3 id="footer-about-title">About</h3>
+                        <p id="footer-about-text"></p>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Connect</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Twitter">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="GitHub">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p id="footer-copyright"></p>
+                    <p>Designed with ❤️</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

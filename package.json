@@ -1,0 +1,28 @@
+{
+  "name": "website-automation-suite",
+  "version": "1.0.0",
+  "description": "Advanced automation suite for website deployment, ad injection, and AI content generation.",
+  "main": "menu.js",
+  "scripts": {
+    "start": "node menu.js",
+    "deploy:all": "node deploy-empire-repos.js",
+    "deploy:one": "node deploy-single-site.js",
+    "deploy": "node bot-deploy.js",
+    "test": "node --check bot-deploy.js && node --check deploy-empire-repos.js && node --check deploy-single-site.js && node --check menu.js && node --check lib/inject.js && echo \"✅ all scripts parse\""
+  },
+  "keywords": [
+    "automation",
+    "deployment",
+    "github-pages",
+    "static-site",
+    "content-generation",
+    "monetization"
+  ],
+  "author": "Prem Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "prompts": "^2.4.2",
+    "chalk": "^4.1.2"
+  }
+}
