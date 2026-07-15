@@ -7,6 +7,8 @@ A powerful, all-in-one automation suite for building, managing, and deploying a 
 
 > ⚠️ **Security:** Never commit your GitHub token. Copy `.env.example` → `.env` (git-ignored) and fill in your own. See [SECURITY.md](SECURITY.md).
 
+> 🔗 **Part of the autonomous money-earning stack:** this is a *complete website template* referenced by [`Hermes-Full-Autonomous-Company`](https://github.com/itsPremkumar/Hermes-Full-Autonomous-Company) (see `revenue/sample-website-template-website-automation.md`). Its sibling flagship is [`sproutern`](https://github.com/itsPremkumar/sproutern-open-source).
+
 ## 🌟 Key Features
 
 ### 1. 🏗️ Dynamic Site Generation
@@ -46,8 +48,9 @@ A powerful, all-in-one automation suite for building, managing, and deploying a 
 
 ## 📚 Documentation
 
-- **[> STEP-BY-STEP SETUP GUIDE](SETUP_GUIDE.md)**: Detailed instructions on installation and configuration.
+- **[> Step-by-step Setup Guide](SETUP_GUIDE.md)**: Detailed instructions on installation and configuration.
 - **[> Template Documentation](sites/common-website-template/README.md)**: How to customize the master template.
+- **[> Full Architecture & Complete Guide](ARCHITECTURE.md)**: System design, loop, honest money model, security.
 
 ---
 
