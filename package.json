@@ -8,7 +8,10 @@
     "deploy:all": "node deploy-empire-repos.js",
     "deploy:one": "node deploy-single-site.js",
     "deploy": "node bot-deploy.js",
-    "test": "node --check bot-deploy.js && node --check deploy-empire-repos.js && node --check deploy-single-site.js && node --check menu.js && node --check lib/inject.js && echo \"✅ all scripts parse\""
+    "content": "node lib/content.js",
+    "improve": "node self-improve.js",
+    "loop": "node self-improve.js",
+    "test": "node --check bot-deploy.js && node --check deploy-empire-repos.js && node --check deploy-single-site.js && node --check menu.js && node --check lib/inject.js && node --check lib/measure.js && node --check lib/improve.js && node --check lib/content.js && node --check self-improve.js && echo \"✅ all scripts parse\""
   },
   "keywords": [
     "automation",

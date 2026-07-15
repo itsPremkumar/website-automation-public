@@ -64,5 +64,36 @@ website-automation/
 └── .env                        # Secrets (GitHub Token)
 ```
 
-## 📄 License
-MIT License — see [LICENSE](LICENSE).
+## 🤖 6. The Self-Improving Loop (Hermes-style)
+
+Once your sites exist, the system can **run itself** on a daily schedule —
+measure → decide the weakest signal → make ONE reversible change → deploy → verify → log.
+
+```bash
+# generate original, 800+ word posts (avoids thin-content / AdSense rejection)
+npm run content -- <slug> [count]
+
+# run ONE autonomous improvement cycle for every site in niches.js
+npm run loop          # = node self-improve.js
+```
+
+**Cron (hands-off):** copy `cron.example` into `crontab -e`:
+```cron
+7 3 * * *  cd /path/to/website-automation && npm run loop >> logs/loop.log 2>&1
+```
+
+**What the loop improves today** (rules engine in `lib/improve.js`):
+- No posts / thin content → run the content generator
+- Empty `<title>` / meta description → fill from `site-config.json`
+- Missing JSON-LD → inject structured data
+- Missing/invalid `sitemap.xml` → write a valid one
+- CSS > 30 KB → flag for minification
+
+**Measure** (`lib/measure.js`) checks live reachability, GitHub stars, post
+count, meta completeness, JSON-LD, sitemap, and CSS size. Every change is
+logged to each site's `IMPROVEMENT_LOG.md`. Deploy only fires if `.env`
+has a `GITHUB_TOKEN` — otherwise the change is applied locally and logged.
+
+> The loop makes the *system* better over time (more content, better SEO,
+> valid sitemaps). It does **not** manufacture traffic or ad approval — those
+> remain human/algorithmic gates.

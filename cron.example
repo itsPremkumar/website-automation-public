@@ -1,0 +1,7 @@
+# ── Cron (self-improving loop) ──────────────────────────────────────
+# Install:  crontab -e
+# Runs the Hermes-style daily loop at 03:07 (odd minute avoids the :00 stampede)
+7 3 * * *  cd /path/to/website-automation && /usr/bin/node self-improve.js >> logs/loop.log 2>&1
+
+# Or via npm:
+# 7 3 * * *  cd /path/to/website-automation && npm run loop >> logs/loop.log 2>&1
